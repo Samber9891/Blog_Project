@@ -30,10 +30,15 @@ public class BlogPost {
             this.blogEntry = blogEntry;
         }
     // source action - getters and setters (all but id)
+
+    public Long getId() {
+        return id;
+    }
+    
         public String getTitle() {
             return title;
         }
-    
+
         public void setTitle(String title) {
             this.title = title;
         }
@@ -59,7 +64,12 @@ public class BlogPost {
         public String toString() {
             return "BlogPost [author=" + author + ", blogEntry=" + blogEntry + ", id=" + id + ", title=" + title + "]";
         }
-    
+
+
+	
+
+
+		
         
     
     }
