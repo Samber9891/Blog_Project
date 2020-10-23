@@ -1,0 +1,21 @@
+
+.body{
+    background-color: #A9C3B6;
+}
+
+.jumbotron{
+background-image: url(https://secure.img1-fg.wfcdn.com/im/40371537/resize-h600%5Ecompr-r85/9750/97500388/3%2522+x+42%2522+Reclaimed+Peel+and+Stick+Solid+Wood+Wall+Paneling.jpg);
+text-align: center;
+text-shadow: 50px;
+border-style: groove;
+border-width: 5px;
+border-color: slategray;
+color: #F6F6ED
+
+}
+
+.container{ 
+	background-color: rgba(61, 35, 20, 0.2);
+	border-style: groove;
+	border-color: rgba(61, 35, 20, 0.8);
+}
