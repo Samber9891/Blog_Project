@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Samantha Blog</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+  <body>
+    <div th:replace="fragments/navbar :: navbar" ></div>
+    
+    <div class="container">
+      <h1>Create a New Blog Post</h1>
+       <form action="#" 
+       th:action="@{/blogpost/update/{id}(id=${blogPost.id})}" 
+       th:object="${blogPost}" 
+       method="post">
+       
+       <div class="form-group">
+         <input type="text" class="form-control mb-3" placeholder="Blog Title..." th:field="*{title}" />
+       </div>
+       
+       <div class="form-group">
+         <input type="text" class="form-control mb-3" placeholder="Your Name Here..." th:field="*{author}" />
+       </div>
+       
+       <div class="form-group">
+         <input type="text" class ="form-control mb-3" placeholder="Blog Entry" th:field="*{blogEntry}" />
+       </div>
+  
+       <button type ="Submit" class="btn btn-primary">Submit Your Post</button>
+  </form>
+  </div>
+
+  <div th:fragment="body-links">
+  </body>
+  </html>
