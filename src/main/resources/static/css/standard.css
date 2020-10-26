@@ -2,13 +2,14 @@
 
 body{
     background-image: url(https://api.timeforkids.com/wp-content/uploads/2019/09/final-cover-forest.jpg);
+   
 }
 
 
 
 
 .container{ 
-    background-color: rgba(235, 149, 50, 0.4);
+    background-color: rgba(98, 78, 44, 0.6);
 	border-style: groove;
     border-color: rgba(61, 35, 20, 0.6);
     margin-top: 20px;
@@ -24,3 +25,24 @@ body{
     text-shadow: 10px;
     color: whitesmoke;
 }
+
+.card-body{
+    color:e;
+    background-color: rgba(246,246,237,0.9)
+}
+
+.card-header{
+    color: whitesmoke;
+    background-color:rgba(144, 198, 149, 1)
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.lead{
+    text-align: center;
+    color: whitesmoke;
+}
+
