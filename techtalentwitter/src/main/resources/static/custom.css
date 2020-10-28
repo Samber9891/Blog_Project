@@ -1,7 +1,14 @@
-body {
-    background-color: black ;
+.modal {
+    
 }
 
-.container {
-    color: azure;
+
+
+
+p {
+    
+    width: 500px;
+    border: 02px solid darkgray;
+    padding: 50px;
+    margin: 20px;
 }
