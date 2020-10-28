@@ -7,16 +7,18 @@
     
 </head>
 <body>
-    <div class="container">
+    <div class="container" >
+        <div th:replace="fragments/navbar"></div>
         <h2>Tweets</h2>
         <div th:each="tweet:${tweetList}">
-            <h5>@<span th:text="${tweet.user.username}"></span>
+            <h5 class="mb-1" style="color: #00aced"><i class="fab fa-twitter"></i> @<span th:text="${tweet.user.username}"></span></h5>
             <small><span th:text="${#dates.format(tweet.createdAt, 'M/d/yy')}"></span></small></h5>
             <p th:utext="${tweet.message}"></p>
     	</div>
     </div>
+</div>
 
-    
     <div th:replace="/fragments/styling :: body-links" ></div>
+    
 </body>
 </html>
