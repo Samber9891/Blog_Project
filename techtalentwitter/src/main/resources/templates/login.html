@@ -4,10 +4,11 @@
 <head>
     <title>Log in</title>
     <div th:replace="/fragments/styling :: head-style" ></div>
-    
+    <div th:replace="/fragments/styling :: body-links" ></div>
 </head>
 <body>
 <div class="container"> 
+    <div th:replace="fragments/navbar"></div>
     <h2>Welcome!</h2>
     <form th:action="@{/login}" method="post">
     <input type="text" id="username" name="username" th:placeholder="Username" class="form-control"><br/>
@@ -21,16 +22,16 @@
 
     <div class="containter">
         <h3 style="text-align: center">Not a memeber? Sign up here!</h3>
-        <form th:action="@{/registration}" method="post">
+        <form th:action="@{/signup}" method="post">
     <button class="btn btn-md btn-info btn-block" name="Submit" value="Login" type="Submit">Sign up</button>
     </form>
     </div>
 </div>
-       
+     
 
 
 
 
-<div th:replace="/fragments/styling :: body-links" ></div>
+
 </body>
 </html>
