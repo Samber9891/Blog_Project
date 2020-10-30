@@ -1,14 +1,15 @@
-.modal {
-    
+a.username {
+    color: #00aced
 }
 
-
-
+a.tag {
+    color: #0084b4
+}
 
 p {
     
-    width: 500px;
-    border: 02px solid darkgray;
-    padding: 50px;
-    margin: 20px;
+        border: 1px solid;
+        padding: 20px;
+        box-shadow: 5px 05px #888888;
+      
 }
