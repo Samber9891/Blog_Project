@@ -13,7 +13,7 @@
     <form th:action="@{/login}" method="post">
     <input type="text" id="username" name="username" th:placeholder="Username" class="form-control"><br/>
     <input type="password" id="password" name="password" th:placeholder="Password" class="form-control"><br/>
-    <div align="center" th:if="${param.error}">
+    <div align ="center" th:if="${param.error}">
         <!-- Align with bootstrap later -->
         <h4 style="color: red">Login unsuccessful.</h4>
     </div>
