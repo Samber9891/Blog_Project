@@ -18,7 +18,11 @@ public class BlogPostController {
     @Autowired
     private BlogPostRepository blogPostRepository;
 
+    @Autowired
+    private BlogService blogService;
+
     private List<BlogPost> posts = new ArrayList<>();
+
 // localhost 8080
 // handle get request to foward slash
     
@@ -43,6 +47,14 @@ public class BlogPostController {
         return "blogpost/new";
     }
  
+@GetMapping (value= "/blogpost/{tag}") 
+public String getTweetsByTag(@PathVariable(value="tag") String tag, Model model) {
+    List<BlogPostDisplay> blogPost = blogService.findAllWithTag(tag);
+    model.addAttribute("blogList", blogPost);
+    model.addAttribute("tag", tag);
+    return "taggedblogpost";
+}
+
 
     @PostMapping(value = "/blogpost")
     public String addNewBlogPost(BlogPost blogPost, Model model) {
@@ -102,7 +114,7 @@ public class BlogPostController {
         // Use a variable to store the blogPost if its there
         Optional<BlogPost> editPost= blogPostRepository.findById(id); 
 
-        // Initionalize a varible to be filled by the post if it exists 
+        // Initalize a varible to be filled by the post if it exists 
         BlogPost result = null;  
 
         // Us optional methiod to check it the post came through
