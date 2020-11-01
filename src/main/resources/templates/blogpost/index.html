@@ -18,14 +18,15 @@
         <!-- Create for each loop and makes  -->
         <div th:each="blog:${posts}">
           <div class="col-md-12 p-0 mb-3" style="min-width: 18rem">
-	        <h4 class="card-header" th:text="${blog.title}"/>
+          <h4 class="card-header" th:text="${blog.title}"></h4>  
 	      <div class="card-body">
-          <p class="card-text" th:text="${blog.author}" />
-		<p class="card-text" th:text="${blog.blogEntry}"/>
+          <p class="card-text" th:text="${blog.author}">
+		<p class="card-text" th:text="${blog.blogEntry}">
          </div>
         </div>
          <div class= "card-footer">
           <div class="form-group">
+            <small th:text="${blog.date}"></small>
             <a herf ="#" th:href="@{'/blogpost/edit/{id}'(id=${blog.id})}" class="card-line btn btn-info">Edit Post</a>
             <a herf ="#" th:href="@{'/blogpost/delete/{id}'(id=${blog.id})}" class="card-line btn btn-danger">Delete Post</a>
           </div>
