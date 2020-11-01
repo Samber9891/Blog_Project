@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Samantha Blog</title>
+    
     <div th:replace="/fragments/styling :: head-style" ></div>
   </head>
 
@@ -10,6 +11,7 @@
     
     <div class="container">
       <h1>Create a New Blog Post</h1>
+      <h3>Add a hastag to find similar content!</h3>
        <form action="#" th:action="@{/blogpost}" th:object="${blogPost}" method="post">
        
        <div class="form-group">
@@ -26,6 +28,7 @@
   
        <button type ="Submit" class="btn btn-primary">Submit Your Post</button>
   </form>
+ 
   </div>
 
   <div th:fragment="body-links">
