@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Samantha Blog</title>
+    
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+  <body>
+    <div th:replace="fragments/navbar :: navbar" ></div>
+    <div class="container"> 
+        <h2>Blog's containing #<span th:text="${tag}"></span></h2>
+
+    <div th:fragment="body-links">
+    </body>
+    </html>
