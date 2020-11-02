@@ -74,17 +74,17 @@ public class BlogService {
         SimpleDateFormat simpleDate = new SimpleDateFormat("M/d/yy");
         Date now = new Date();
         for (BlogPost blogPost : blogPosts) {
-            BlogPostDisplay blogDisplay = new BlogPostDisplay();
-            blogDisplay.setBlogEntry(blogPost.getBlogEntry());
-            blogDisplay.setTag(blogPost.getTags());
+            BlogPostDisplay blogPostDisplay = new BlogPostDisplay();
+            blogPostDisplay.setBlogEntry(blogPost.getBlogEntry());
+            blogPostDisplay.setTag(blogPost.getTags());
             long diffInMillies = Math.abs(now.getTime() - blogPost.getCreatedAt().getTime());
             long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
             if (diff > 3) {
-                blogDisplay.setDate(simpleDate.format(blogPost.getCreatedAt()));
+                blogPostDisplay.setDate(simpleDate.format(blogPost.getCreatedAt()));
             } else {
-                blogDisplay.setDate(prettyTime.format(blogPost.getCreatedAt()));
+                blogPostDisplay.setDate(prettyTime.format(blogPost.getCreatedAt()));
             }
-            response.add(blogDisplay);
+            response.add(blogPostDisplay);
         }
         return response;
     }
@@ -101,7 +101,7 @@ public class BlogService {
             }
             for (String tag : tags) {
                 blogEntry = blogEntry.replaceAll(tag,
-                "<a class=\"tag\" href=\"/tweets/" + tag.substring(1).toLowerCase() + "\">" + tag + "</a>");
+                "<a class=\"tag\" href=\"/blogpost/taggedblogpost" + tag.substring(1).toLowerCase() + "\">" + tag + "</a>");
             }
             blogPost.setBlogEntry(blogEntry);
         }
