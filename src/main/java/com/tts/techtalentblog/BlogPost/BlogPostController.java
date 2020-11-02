@@ -49,10 +49,10 @@ public class BlogPostController {
  
 @GetMapping (value= "/blogpost/{tag}") 
 public String getTweetsByTag(@PathVariable(value="tag") String tag, Model model) {
-    List<BlogPostDisplay> blogPost = blogService.findAllWithTag(tag);
-    model.addAttribute("blogList", blogPost);
+    List<BlogPostDisplay> blogPosts = blogService.findAllWithTag(tag);
+    model.addAttribute("blogList", blogPosts);
     model.addAttribute("tag", tag);
-    return "taggedblogpost";
+    return "blogpost/taggedblogpost";
 }
 
 
