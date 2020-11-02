@@ -35,7 +35,8 @@
             <div class="form-group">
                 <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit" th:text="Submit"></button>
             </div>
-          
+            
+            <div th:if="${success}">
                 <div class ="modal" data-toggle="modal"data-target="#success-message" >
                     <div class="modal fade" id="success-message" tabindex="-1" role="dialog" aria-labelledby="successTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
