@@ -55,6 +55,8 @@ public class BlogPost {
         this.tags = tags;
     }
 
+
+      // source action - getters and setters (all but id)
     public Long getId() {
         return id;
     }
@@ -111,6 +113,10 @@ public class BlogPost {
         this.tags = tags;
     }
 
+
+
+    
+         // source action - toString (all)
     @Override
     public String toString() {
         return "BlogPost [author=" + author + ", blogEntry=" + blogEntry + ", createdAt=" + createdAt + ", date=" + date
@@ -118,12 +124,11 @@ public class BlogPost {
     }
 
        
-    // source action - getters and setters (all but id)
+  
 
      
 
 
-         // source action - toString (all)
       
 
 
